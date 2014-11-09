@@ -1,0 +1,10 @@
+    <h1>Blog Posts</h1>
+    <ul>
+        <% @blogposts.each do |b| %>
+            <li>
+                <strong> <%= b.title %> </strong> -- <%= b.camera %> -- <%= b.desc %> <%= link_to "View Post", blogpost_path(b) %>
+            </li>
+        <% end %>
+    </ul>
+
+        <%= link_to "Create a Post", new_blogpost_path %>

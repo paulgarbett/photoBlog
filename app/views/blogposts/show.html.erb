@@ -1,0 +1,8 @@
+    <h1> <%= @blogpost.title %> </h1>
+
+    <p> <%= @blogpost.camera %></p>
+    <p> <%= @blogpost.desc %></p>
+
+    <%= link_to "Back to posts", blogposts_path %>
+    <%= link_to "Delete this Post", :blogpost, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+    <%= link_to "Edit this post", edit_blogpost_path %>

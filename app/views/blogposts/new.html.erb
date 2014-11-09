@@ -1,0 +1,13 @@
+    <h1> Make a Post </h1>
+
+    <%= form_for @blogpost do |f| %>
+        Title: <%= f.text_field :title %><br><br>
+        Camera: <%= f.text_field :camera %><br><br>
+        Description: <%= f.text_field :desc %><br><br>
+        
+
+        <%= f.submit "Add Post!" %>
+
+    <% end %><br>
+
+    <%= link_to "Back to the list!", blogposts_path %>
